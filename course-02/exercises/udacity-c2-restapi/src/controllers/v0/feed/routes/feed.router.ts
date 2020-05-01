@@ -19,7 +19,9 @@ router.get('/', async (req: Request, res: Response) => {
 //@TODO
 //Add an endpoint to GET a specific resource by Primary Key
 router.get('/:id', async (req: Request, res: Response) => {
-    res.send(500).send("not implemented")
+    let {id} = req.params;
+
+    res.status(200).send(`you requested id ${id}`)
 })
 
 // update a specific resource
